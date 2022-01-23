@@ -3,10 +3,10 @@ var btn_search = document.getElementById('search');
 
 function getData(){
     console.log("Started fetching...")
-    url = "http://universities.hipolabs.com/search?country={"+country+"}";
+    url = "http://universities.hipolabs.com/search?country={India}";
     fetch(url).then((response)=>{
         console.log("inside first then");
-        return response.text();
+        return response.json();
     }).then((data)=>{
         console.log("inside second then");
         console.log(data);
