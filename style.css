@@ -1,0 +1,10 @@
+body{
+    background-color: lemonchiffon;
+}
+table{
+    border: 1px solid blue;
+    margin: 0 auto 0 auto;
+}
+tr, td, th{
+    border: 1px solid green;
+}
