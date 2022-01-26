@@ -5,7 +5,7 @@ function getData(){
     // console.log("Started fetching...")
     universities.innerText="Started fetching...";
     
-    url = "http://universities.hipolabs.com/search?country="+country;
+    url = "https://api2.binance.com/api/v3/ticker/24hr";
            
     fetch(url).then((response)=>{
         // console.log("inside first then");
@@ -17,9 +17,9 @@ function getData(){
         var td0 = document.createElement('th');
         td0.innerText = "S.No.";
         var td1 = document.createElement('th');
-        td1.innerText = "Universities";
+        td1.innerText = "Coin Name";
         var td2 = document.createElement('th');
-        td2.innerText = "Website";
+        td2.innerText = "Price";
             tr.appendChild(td0);
             tr.appendChild(td1);
             tr.appendChild(td2);
@@ -31,8 +31,8 @@ function getData(){
             let td1 = document.createElement('td');
             let td2 = document.createElement('td');
             td0.innerText = i;
-            td1.innerText = data[i].name;
-            td2.innerText = data[i].web_pages;
+            td1.innerText = data[i].symbol;
+            td2.innerText = data[i].priceChange;
             tr.appendChild(td0);
             tr.appendChild(td1);
             tr.appendChild(td2);
